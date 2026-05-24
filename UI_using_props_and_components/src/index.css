@@ -1,0 +1,244 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+}
+
+/* navbar */
+nav{
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  padding: 5px;
+  background-color: #fff;
+  width: 100%;
+}
+
+nav .left{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav .left h1{
+  font-size: 24px;
+  font-style: italic;
+}
+
+nav .left input{
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 200px;
+}
+nav .left .search-icon{
+  border: 1px solid #ccc;
+  padding: 1px 5px;
+  border-radius: 3px;
+  color: rgb(251, 79, 162);
+}
+
+nav .left select{
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 140px;
+}
+
+nav .right{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: rgb(251, 79, 162);
+}
+
+
+/* card */
+.cards{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+}
+
+.card{
+  width: 250px;
+  height: 250px;
+  padding: 10px 10px 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card #status{
+  float: left;
+  border: 2px solid green;
+  color: green;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-size: 10px;
+  font-weight: bold;
+}
+.card #id{
+  float: right;
+  padding: 5px 10px;
+  color: #666;
+  padding: 3px 10px;
+  font-size: 10px;
+}
+.card .img_box{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card img{
+  width: 30%;
+  object-fit: cover;
+  object-position: center;
+  border-radius:50%;
+}
+
+.card h1{
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+}
+ 
+.card h5{
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin: 5px;
+  flex-grow: 1;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.buttons div{
+  width: 50%;
+  display: flex;
+  padding: 5px;
+  color:blue;
+  gap: 10px;
+  border: #efebebc0 1px solid;
+}
+.buttons #edit{
+  border-right: none;
+}
+.buttons #email{
+  border-left: none;
+}
+
+.buttons div button{
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav .left {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  nav .left h1 {
+    font-size: 18px;
+  }
+
+  nav .left input {
+    width: 150px;
+  }
+
+  nav .left select {
+    width: 100px;
+    font-size: 12px;
+  }
+
+  nav .right {
+    gap: 15px;
+    font-size: 20px;
+  }
+
+  nav {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav .left {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  nav .left h1 {
+    font-size: 16px;
+    min-width: 60px;
+  }
+
+  nav .left input {
+    width: 100%;
+    order: 4;
+  }
+
+  nav .left select {
+    width: calc(50% - 4px);
+    font-size: 11px;
+    padding: 3px;
+  }
+
+  nav .right {
+    width: 100%;
+    justify-content: space-around;
+    gap: 10px;
+    font-size: 18px;
+  }
+
+  .search-icon {
+    display: none;
+  }
+
+  .cards {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    min-height: 280px;
+  }
+}
+
